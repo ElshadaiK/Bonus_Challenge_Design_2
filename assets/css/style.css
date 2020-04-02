@@ -98,3 +98,87 @@
 .page-wrapper > input:hover + a:after {
     border-bottom-color: rgb(167, 67, 36);
 }
+ 
+.st-scroll,
+.st-panel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.st-scroll {
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    
+    /* Let's enforce some hardware acceleration */
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+}
+
+.st-panel{
+    background: #db8709ee;
+    overflow: scroll;
+} 
+
+#st-control-1:checked ~ .st-scroll {
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+}
+#st-control-2:checked ~ .st-scroll {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+#st-control-3:checked ~ .st-scroll {
+    -webkit-transform: translateY(-200%);
+    -moz-transform: translateY(-200%);
+    -o-transform: translateY(-200%);
+    -ms-transform: translateY(-200%);
+    transform: translateY(-200%);
+}
+#st-control-4:checked ~ .st-scroll {
+    -webkit-transform: translateY(-300%);
+    -moz-transform: translateY(-300%);
+    -o-transform: translateY(-300%);
+    -ms-transform: translateY(-300%);
+    transform: translateY(-300%);
+}
+#st-control-5:checked ~ .st-scroll {
+    -webkit-transform: translateY(-400%);
+    -moz-transform: translateY(-400%);
+    -o-transform: translateY(-400%);
+    -ms-transform: translateY(-400%);
+    transform: translateY(-400%);
+}
+#st-control-6:checked ~ .st-scroll {
+    -webkit-transform: translateY(-500%);
+    -moz-transform: translateY(-500%);
+    -o-transform: translateY(-500%);
+    -ms-transform: translateY(-500%);
+    transform: translateY(-500%);
+}
+#st-control-7:checked ~ .st-scroll {
+    -webkit-transform: translateY(-600%);
+    -moz-transform: translateY(-600%);
+    -o-transform: translateY(-600%);
+    -ms-transform: translateY(-600%);
+    transform: translateY(-600%);
+}
+#st-control-8:checked ~ .st-scroll {
+    -webkit-transform: translateY(-700%);
+    -moz-transform: translateY(-700%);
+    -o-transform: translateY(-700%);
+    -ms-transform: translateY(-700%);
+    transform: translateY(-700%);
+}
+
