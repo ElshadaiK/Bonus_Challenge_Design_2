@@ -1,0 +1,100 @@
+.page-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.page-wrapper > input,
+  .page-wrapper > a {
+      position: fixed;
+      top: 0px;
+      width: 12.5%;
+      cursor: pointer;
+      font-size: 16px;
+      height: 49px;
+      line-height: 44px;
+  }
+  
+  .page-wrapper > input {
+      opacity: 0;
+      z-index: 1000;
+  }
+  
+  .page-wrapper > a {
+      z-index: 10;
+      font-weight: 700;
+      background: #502a3d;
+      color: rgb(211, 146, 50);
+      text-align: center;
+      text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
+  }
+  
+  /* "Fix" for percentage rounding: add a background bar pseudo element with the same color like the labels */
+  .page-wrapper:before {
+      content: '';
+      position: fixed;
+      width: 100%;
+      height: 54px;
+      background: #eca841;
+      z-index: 9;
+      bottom: 0;
+  }
+  
+  #st-control-1, #st-control-1 + a {
+    left: 0;
+}
+
+#st-control-2, #st-control-2 + a {
+    left: 12.5%;
+}
+
+#st-control-3, #st-control-3 + a {
+    left: 25%;
+}
+
+#st-control-4, #st-control-4 + a {
+    left: 37.5%;
+}
+
+#st-control-5, #st-control-5 + a {
+    left: 50%;
+}
+#st-control-6, #st-control-6 + a {
+    left: 62.5%;
+}
+#st-control-7, #st-control-7 + a {
+    left: 75%;
+}
+#st-control-8, #st-control-8 + a {
+    left: 87.5%;
+}
+
+.page-wrapper > input:checked + a,
+.page-wrapper > input:checked:hover + a{
+    background: rgb(167, 67, 36);
+}
+
+.page-wrapper > input:checked + a:after,
+.page-wrapper > input:checked:hover + a:after{
+    top: 100%;
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-top-color: rgb(167, 67, 36);
+    border-width: 20px;
+    left: 50%;
+    margin-left: -20px;
+}
+
+.page-wrapper > input:hover + a{
+    background: #a35d41;
+}
+
+.page-wrapper > input:hover + a:after {
+    border-bottom-color: rgb(167, 67, 36);
+}
